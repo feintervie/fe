@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子元素未知宽度和高度</title>
+    <style>
+
+        /* flex布局实现 */
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+            /* display: flex;
+            flex-flow: nowrap row;
+            align-items: center;
+            justify-content: center; */
+        }
+
+        /* 绝对定位实现 */
+        .container {
+            position: relative;
+        }
+
+        .container > div {
+            /* display: inline-block; */
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0
+        }
+
+
+    </style>
+
+    <style>
+
+        /* 使用transform完成子元素未知的宽度的垂直水平居中 */
+        .container {
+            position: relative;
+        }
+
+        .container div {
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+
+    <style>
+        /* 使用display: table-cell垂直水平居中 */
+
+        .container {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .container div{
+            display:inline-block;
+        }
+    </style>
+
+    </head>
+</head>
+<body>
+    <div class="container">
+        <div>我要垂直水平居中</div>
+    </div>
+</body>
+</html>

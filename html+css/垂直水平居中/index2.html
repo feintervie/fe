@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>已知子元素宽度和高度</title>
+    <style>
+        *{
+            width: 0;
+            height: 0;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+            position: relative;
+            display: flex;
+        }
+
+        .container span {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #000;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+    </div>
+</body>
+</html>

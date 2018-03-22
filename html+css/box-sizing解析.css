@@ -1,0 +1,6 @@
+box-sizing 主要为解决盒模型在不同的浏览器上的变现不一致的问题
+
+1、 border-box    计算方法时  border+padding+content   padding和border-width 都不会
+改变对象的实际宽度
+
+2、 context-box   计算方法   content   对象的实际width = border+padding+content

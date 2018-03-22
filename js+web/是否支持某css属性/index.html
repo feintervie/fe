@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var testSupportCss = (function() {
+            var div = document.createElement('div');
+            var prefixList = ['Ms',
+                'O',
+                'Moz',
+                'Webkit'
+            ];
+            var len = prefixList.length;
+
+            return function(prop) {
+                if (prop in div.style) return true;
+
+                prop = prop.replace(/^[a-z]/, function(val) {
+                    return val.toUpperCase();
+                });
+
+                while (len--) {
+                    if (prefixList[len] + prop in div.style) {
+                        return true;
+                    }
+                }
+                return false;
+            };
+        })();
+
+
+        // html5 新属性是否支持
+        function elementSupportsAttribute(element, attribute) {
+            var test = document.createElement(element);
+            if (attribute in test) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
