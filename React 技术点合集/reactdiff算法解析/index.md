@@ -1,4 +1,5 @@
 // 参考文章  http://www.infoq.com/cn/articles/react-dom-diff
+// https://juejin.im/post/5ac355576fb9a028cc616aad
 
 /* eslint-disable */
 

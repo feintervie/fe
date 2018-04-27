@@ -1,0 +1,17 @@
+
+
+MVVM的概念解析
+
+在ViewModel中有一个交Binder的东西，view和model之间的数据同步的操作都是交由Binder处理，你只需要在view的模板语法中指令式的声明view上显示的内容与Model中的哪块数据绑定即可，当Viewmodel进行Model更新的时候（例如ajax请求数据），Binder会自动的吧数据渲染到view上面，当用户进行操纵的时候（例如表单输入），Binder也会把数据更新到Model上，这种方式叫数据的双向绑定。
+
+
+MVVM的优缺点：
+
+1.解决了view层和model层数据自动同步的问题，提供了数据的双向绑定
+2. 简化了测试，同步逻辑交给了Binder去处理，view和model层变成了只是纯数据的概念，并且二者的数据一致，只需要保证model层的数据正确，那么view层的数据也正确。大大减少了对view的同步更新的测试
+
+
+缺点：
+
+1. 大型的项目，视图状态较多的话，ViewModel会变得很冗杂，ViewModel构建和维护的成本会比较高。
+2. 数据绑定的声明时指令式的写在view模板中，没法打断点去debug

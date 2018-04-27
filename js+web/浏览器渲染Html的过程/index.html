@@ -13,5 +13,16 @@ CSS 的 Rule Tree主要是为了完成匹配并把CSS Rule附加上Rendering Tre
 3）最后通过调用操作系统Native GUI的API绘制。
 
 
+
+1)解析HTML，构建DOM树（这里遇到外链，此时会发起请求）
+2)解析CSS，生成CSS规则树
+3)合并DOM树和CSS规则，生成render树
+4)布局render树（Layout/reflow），负责各元素尺寸、位置的计算
+5)绘制render树（paint），绘制页面像素信息
+6)浏览器会将各层的信息发送给GPU，GPU将各层合成（composite），显示在屏幕上
+
+
+// http://mp.weixin.qq.com/s/BhqQNmIVvCCmqiUkyamsNA
 // https://coolshell.cn/articles/9666.html
+// https://juejin.im/post/5ab9a8006fb9a028db58b354
 
