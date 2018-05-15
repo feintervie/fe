@@ -48,3 +48,68 @@ arr.sort(function (a, b) {
 
 
 console.log(arr);
+
+
+
+//  更新快速排序算法上面的快排每次递归的时候都会创建临时的两个数组时间复杂度nlogn
+
+// 快速排序的 O(1)实现
+
+function swap(arr, a, b){
+    [arr[a], arr[b]] = [arr[b], arr[a]];
+}
+
+function quickSort2(arr) {
+    return quick(arr, 0, arr.length-1);
+}
+
+function quick(arr, left, right) {
+    let index;
+
+    if(arr.length> 1) {
+        index= partition(arr, left, right);
+
+        if(left< index-1){
+            quick(arr, left, index-1);
+        }
+
+        if(index< right) {
+            quick(arr, index, right);
+        }
+    }
+
+    return arr;
+}
+
+function partition (arr, left, right) {
+    const pivot = arry[Math.floor((right+ left) / 2)];
+
+    let i = left;
+    let j = right;
+
+    while (i <= j) {
+        while (compare(arr[i], pivot) === -1) {
+            i++;
+        }
+
+        while(compare(arr[j], pivot) ===1) {
+            j--;
+        }
+
+        if(i<=j) {
+            swap(arr, i, j);
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
+
+
+function compare(a, b) {
+    if(a===b) {
+        return 0;
+    } else {
+        return a < b ? -1 : 1;
+    }
+}
