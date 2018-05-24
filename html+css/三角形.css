@@ -1,0 +1,15 @@
+/*
+
+ 主要利用css3 的border 在拐角处分割
+
+*/
+
+
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid #f0f0f0;
+    border-right: 50px solid #f0f0f0;
+    border-bottom: 100px solid red;
+    background-color: #000;
+}
