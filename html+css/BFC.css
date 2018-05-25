@@ -1,0 +1,9 @@
+块级格式化上下文 创建一个盒子，盒子内的元素布局不会影响盒子外的元素的布局
+
+触犯BFC的方法
+
+
+1. float 除了none以外的值
+2. overflow 除了visible 以外的值（hidden，auto，scroll ）
+3. display (table-cell，table-caption，inline-block)
+4. position（absolute，fixed）
