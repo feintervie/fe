@@ -100,24 +100,6 @@ es6   promise
 
 
 
-reactjs v16版本是基于  map和 set实现的，需要加polyfill
-
-这两个数据结构解析
-
-import 'core-js/es6/map';
-import 'core-js/es6/set';
-
-weakmap 和weakset  单引用的时候自动释放内存，所以对于react来说会有很大的性能优化
-
-
-var obj = {
-    a: 3,
-    b: 8,
-    c: 4,
-}
-
-将obj的key按照value的大小输出为数组
-
 
 常用的nodejs的api
 
@@ -128,9 +110,3 @@ var obj = {
 中间件的封装
 动画的实现方式
 js注册事件给客户端调用的方法
-
-
-
-
-
-数组的api  Array上经常使用的API
