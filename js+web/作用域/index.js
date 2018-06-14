@@ -61,7 +61,7 @@ func1(num);
 
 function func2() {
     console.log(num);
-    var num = 456;
+    var num = 456;    // 这里的num声明影响了func2内Num的作用域不会向全局作用域查找
     console.log(num);
 }
 var num = 123;
