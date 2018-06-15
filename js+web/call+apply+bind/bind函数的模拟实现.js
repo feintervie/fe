@@ -22,13 +22,3 @@ function bind (that) {
 
     return bound
   }
-
-
-
-function abc () {
-    console.log(a)
-}
-
-var a  =1;
-
-abc(a);

@@ -152,7 +152,6 @@ nodejs处理jsonp的原理 中间件的实现，怎么判断是jsonp请求
 react获取子组件
 
 
-function(1)(2)(3){}  求乘
 
 
 函数的闭包执行
