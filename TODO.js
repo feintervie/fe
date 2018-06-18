@@ -123,10 +123,6 @@ proxy和defineprototype的区别
 原型代理的区别
 
 
-实现可迭代的借口
-
-创建可以迭代的对象
-
 
 高并发处理请求。怎么让请求都能够处理。
 
@@ -143,4 +139,19 @@ servicework
 nodejs的时间循环和浏览器的区别
 
 
-react生命周期函数的意义
+
+react  v16版本   fiberjs的原理解析
+
+
+
+dom的操作方法
+session的原理，
+ajax异步的原理（异步回调是怎么实现的）
+react子组件的容错机制
+nodejs处理jsonp的原理 中间件的实现，怎么判断是jsonp请求
+react获取子组件
+
+
+
+
+函数的闭包执行
