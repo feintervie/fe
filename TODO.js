@@ -154,4 +154,5 @@ react获取子组件
 
 
 
-函数的闭包执行
+promise返回的是什么，
+return的时候then可以拿到值么
